@@ -1,0 +1,48 @@
+$color-media-item-border: $orange;
+$color-media-head: $blue;
+
+.media {
+  margin: 0;
+  padding: 0;
+  // get rid of numbers
+  list-style: none;
+
+  // nesting:
+  .item {
+    border-top: 1px dotted $color-media-item-border;
+    padding: 10px;
+    &:hover {
+      background: $yellow;
+    }
+    &:last-of-type {
+      border-bottom: 1px dotted $color-media-item-border;
+    }
+    @include clearfix;
+  }
+
+  .head {
+    margin: 0;
+    padding: 0;
+    color: $color-media-head;
+    font-size: 2rem;
+    #typography & {
+      color: $red;
+    }
+  }
+
+  p {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  img {
+    float: left;
+    margin-right: 10px;
+  }
+
+  a {
+    // no underline
+    text-decoration: none;
+    color: $color-main;
+  }
+}

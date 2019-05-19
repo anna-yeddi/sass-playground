@@ -1,0 +1,29 @@
+/*! Load Fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Open+Sans');
+
+
+$offwhite: #EEE8D6; // beige
+$darkblue: #022933;
+$darkblue-transp: #022933b9;
+$yellow:   #ffba00;
+$blue:     #0076a3;
+$green:    #548c27;
+$orange:   #f39856;
+$red:      #d14348;
+$purple:   #6d73c2;
+
+
+$color-main: $darkblue;
+$color-backgrounds: $offwhite;
+$color-headlines: $red;
+
+
+$font-main: 'Open Sans', Helvetica, sans-serif;
+$font-highlight: Merriweather, Georgia, serif; 
+
+// breakpoints
+
+$small:		450px;
+$medium:	760px;
+$large:		1200px;

@@ -1,0 +1,93 @@
+$color-btn-text: $color-backgrounds;
+// $color-btn-default: $color-main;
+// $color-btn-hot: $red;
+// $color-btn-cold: $blue;
+$roundness: 20px 0 20px 0;
+
+// hidden class - with %
+%btn {
+    display: inline-block;
+    padding: 6px 12px;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    border-radius: 4px;
+    font-family: $font-highlight;
+    color: $color-btn-text;
+}
+
+//// Styling Buttons:
+
+//// 1) Via MAPS (associative lists with keys):
+
+$color-btns: (
+    default: $color-main,
+    hot:     $red,
+    cold:    $blue,
+    awesome: $purple
+);
+
+@each $key, $value in $color-btns {
+    .btn-#{$key} {
+        @extend %btn;
+        background-color: $value;
+    }
+}
+    
+//// 2) Via @EACH loop:
+
+// $color-btn-names: 'default', 'hot', 'cold';
+// $color-btn-values: $color-main, $red, $blue;
+    
+// @each $name in $color-btn-names {
+//     $i: index($color-btn-names, $name);
+    
+//     .btn-#{$name} {
+//         @extend %btn;
+//         // background-color: $color-btn-#{$name};
+//         background-color: nth($color-btn-values, $i);
+//     } 
+// }
+
+//// 3) Via native CSS & variables:
+
+// .btn-default {
+//     // @extend .btn;
+//     @extend %btn;
+//     background-color: $color-btn-default;
+// }
+
+// .btn-hot {
+//     @extend %btn;
+//     background-color: $color-btn-hot;
+// }
+
+// .btn-cold {
+//     @extend %btn;
+//     background-color: $color-btn-cold;
+// }
+
+.btn-muted {
+    @extend %btn;
+}
+
+.grid {
+    padding: 10px 0;
+
+    @include clearfix;
+    .item {
+        float: left;
+        @include imageGrid(3, 2%);
+        // @include imageGrid(5, 1%);
+    }
+    img {
+        display: block;
+        // border-radius: nth($roundness, 1);
+        border-radius: $roundness;
+        // border-radius: 10px;
+        max-width: 100%;
+    }
+}
