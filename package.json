@@ -15,6 +15,14 @@
     "gulp-webserver": "^0.9.1"
   },
   "dependencies": {
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "lodash": "^4.17.19",
+    "minimist": "^1.2.3",
+    "kind-of": "^6.0.3",
+    "set-value": "^2.0.1",
+    "qs": "^6.0.4",
+    "lodash.template": "^4.5.0",
+    "open": "^6.0.0",
+    "minimatch": "^3.0.2",
   }
 }
